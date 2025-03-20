@@ -1,0 +1,51 @@
+<%-include('../cabecalho.ejs')%>
+
+    <body>
+
+        <div class="container">
+            <h1>usuario</h1>
+            <div class="add-usuario">
+                <a href="/admin/usuario/add" class="add-btn">+ usuario</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>usuario</th>
+                        <th>Altura</th>
+                        <th>Peso</th>
+                        <th>Posição</th>
+                        <th>Opções</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Arthur</td>
+                        <td>1.90 cm</td>
+                        <td>86 KG</td>
+                        <td>Ala</td>
+                        <td class="action-buttons">
+                            <a href="/admin/usuario/edt/1" class="edit-btn">Editar</a>
+
+                            <a href="/admin/usuario/del/1" class="delete-btn"><i class="fas fa-trash-alt icon"
+                                    style="color: #ffffff;"></i></i> Excluir</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Lucas</td>
+                        <td>1.80 cm</td>
+                        <td>100 KG</td>
+                        <td>Pivô</td>
+                        <td class="action-buttons">
+                            <a href="/admin/usuario/edt/2" class="edit-btn">Editar</a>
+                            <a href="/admin/usuario/del/2" class="delete-btn"><i class="fa-solid fa-trash"></i>
+                                Excluir</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+
+    </html>

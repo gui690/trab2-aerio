@@ -1,0 +1,37 @@
+<%-include('../cabecalho.ejs')%>
+<body>
+
+    <div class="form-container">
+        <h1>Adicionar aeroporto  </h1>
+        <form action="" method="post">
+            <div class="form-group">
+                <label for="nome">Nome do aeroporto  </label>
+                <input type="text" id="nome" name="nome" required placeholder="Nome completo do aeroporto">
+            </div>
+
+            <div class="form-group">
+                <label for="altura">Altura (em metros)</label>
+                <input type="number" id="altura" name="altura" step="0.01" required placeholder="Ex: 1.85">
+            </div>
+            
+            <div class="form-group">
+                <label for="peso">Peso (em kg)</label>
+                <input type="number" id="peso" name="peso" step="0.1" required placeholder="Ex: 80.5">
+            </div>
+
+            <div class="form-group">
+                <label for="posicao">Posição</label>
+                <select id="posicao" name="posicao" required>
+                    <option value="-selecione-">- Selecione -</option>
+                    <option value="zagueiro">Zagueiro</option>
+                    <option value="pivo">Pivô</option>
+                    <option value="ala">Ala</option>
+                </select>
+            </div>
+
+            <button type="submit">Adicionar aeroporto</button>
+        </form>
+    </div>
+
+</body>
+</html>
