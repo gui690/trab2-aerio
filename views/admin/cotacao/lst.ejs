@@ -1,0 +1,49 @@
+<%-include('../cabecalho.ejs')%>
+
+    <body>
+
+        <div class="container">
+            <h1>Cotação</h1>
+            <div class="add-cotacao">
+                <a href="/admin/cotacao/add" class="add-btn">+ Cotação</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Origem</th>
+                        <th>Destino</th>
+                        <th>Data de ida</th>
+                        <th>Data de volta</th>
+                        <th>Nome</th>
+                        <th>Contato</th>
+                        <th>Status</th>
+                     
+                    </tr>
+                </thead>
+                <tbody>
+                    <%Cotacaos.forEach(function(cotacao){%>
+                    <tr>
+                        <td><%=cotacao.origem=%></td>
+                        <td><%=cotacao.des=%></td>
+                        <td><%=cotacao.dataIda=%></td>
+                        <td><%=cotacao.dataVolta=%></td>
+                        <td><%=cotacao.nome=%></td>
+                        <td><%=cotacao.contato=%></td>
+                        <td><%=cotacao.status=%></td>
+
+                        <td class="action-buttons">
+                            <a href="/admin/cotacao/edt/1" class="edit-btn">Editar</a>
+                            <a href="/admin/cotacao/del/1" class="delete-btn">Excluir</a>
+                        </td>
+                    </tr>
+                    <%})%>
+                 
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </body>
+
+    </html>

@@ -1,0 +1,49 @@
+<%-include('../cabecalho.ejs')%>
+
+    <body>
+
+        <div class="container">
+            <h1>Companhia aeria</h1>
+            <div class="add-companhia">
+                <a href="/admin/companhia/add" class="add-btn">+ Companhia</a>
+            </div>
+
+            <table class="table table-striped table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">País de origem</th>
+                    <th scope="col">Foto</th>
+                    <th scope="col">Editar</th>
+                    <th scope="col">Deletar</th>
+      
+                  </tr>
+                </thead>
+                <tbody>
+                  <%Companhias.forEach(function(companhia){%>
+                    <tr>
+                      <td>
+                        <%=companhia.nome%>
+                      </td>
+                      <td>
+                        <%=companhia.pais_o%>
+                      </td>
+                      
+                      <td>
+                        <a href="/admin/companhia/edt/<%=companhia._id%>">Editar</a>
+                      </td>
+                      
+                      <td>
+                      <a href="/admin/companhia/del/<%=companhia._id%>">Deletar</a>
+                      </td>
+                    </tr>
+      
+                    <%})%>
+      
+                </tbody>
+              </table>
+        </div>
+
+    </body>
+
+    </html>

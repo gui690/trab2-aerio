@@ -3,13 +3,13 @@ const router = express.Router()
 
 import {
     home,
-    abreedtviagem,
-    edtviagem,
-    abreaddviagem,
-    deletaviagem,
-    addviagem,
-    listarviagem,
-    filtrarviagem,
+    abreedtcotacao,
+    edtcotacao,
+    abreaddcotacao,
+    deletacotacao,
+    addcotacao,
+    listarcotacao,
+    filtrarcotacao,
     //
     abreedtaeroporto,
     edtaeroporto,
@@ -26,22 +26,29 @@ import {
     addusuario,
     listarusuario,
     filtrarusuario,
-    
+    //
+    abreedtcompanhia,
+    edtcompanhia,
+    abreaddcompanhia,
+    deletacompanhia,
+    addcompanhia,
+    listarcompanhia,
+    filtrarcompanhia,
     
 } from '../controllers/controller.js'
 router.get('/', home)
-//viagem
-//create do modelo viagem (create)
-router.get('/admin/viagem/add', abreaddviagem)
-router.post('/admin/viagem/add', addviagem)
-//rotas do modelo viagem (read)
-router.get('/admin/viagem/lst', listarviagem)
-router.post('/admin/viagem/lst', filtrarviagem)
-//rota do modelo viagem (delete)
-router.get('/admin/viagem/del/:id', deletaviagem)
-//rota do modelo viagem (editar)
-router.get('/admin/viagem/edt/:id', abreedtviagem)
-router.post('/admin/viagem/edt/:id', edtviagem)
+//cotacao
+//create do modelo cotacao (create)
+router.get('/admin/cotacao/add', abreaddcotacao)
+router.post('/admin/cotacao/add', addcotacao)
+//rotas do modelo cotacao (read)
+router.get('/admin/cotacao/lst', listarcotacao)
+router.post('/admin/cotacao/lst', filtrarcotacao)
+//rota do modelo cotacao (delete)
+router.get('/admin/cotacao/del/:id', deletacotacao)
+//rota do modelo cotacao (editar)
+router.get('/admin/cotacao/edt/:id', abreedtcotacao)
+router.post('/admin/cotacao/edt/:id', edtcotacao)
 
 //aeroporto
 
@@ -71,6 +78,20 @@ router.get('/admin/usuario/del/:id', deletausuario)
 //rota do modelo usuario (editar)
 router.get('/admin/usuario/edt/:id', abreedtusuario)
 router.post('/admin/usuario/edt/:id', edtusuario)
+
+//companhia
+
+//create do modelo usuario (create)
+router.get('/admin/companhia/add', abreaddcompanhia)
+router.post('/admin/companhia/add', addcompanhia)
+//rotas do modelo companhia (read)
+router.get('/admin/companhia/lst', listarcompanhia)
+router.post('/admin/companhia/lst', filtrarcompanhia)
+//rota do modelo companhia (delete)
+router.get('/admin/companhia/del/:id', deletacompanhia)
+//rota do modelo companhia (editar)
+router.get('/admin/companhia/edt/:id', abreedtcompanhia)
+router.post('/admin/companhia/edt/:id', edtcompanhia)
 
 
 export default router

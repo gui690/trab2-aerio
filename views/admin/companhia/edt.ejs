@@ -1,0 +1,29 @@
+<%-include('.. /cabecalho.ejs')%>
+
+    <body>
+
+        <div class="container">
+            <h1>Editar Companhia aeria</h1>
+            <form action="" method="post">
+                <div class="form-group">
+                    <label for="nome">Nome da Companhia aeria  </label>
+                    <input type="text" id="nome" name="nome" required placeholder="Nome completo da companhia">
+                </div>
+    
+                <div class="form-group">
+                    <label for="pais_o">País de Origem</label>
+                    <input type="String" id="pais_o" name="pais_o" step="0.01" required placeholder="Ex: Romenia">
+                </div>
+                
+                <div class="form-group">
+                    <label for="foto">Foto</label>
+                    <input type="String" id="foto" name="foto" step="0.1" required placeholder="Ex:Foto">
+                </div>
+    
+                <button type="submit">Salvar Alterações</button>
+            </form>
+        </div>
+
+    </body>
+
+    </html>
