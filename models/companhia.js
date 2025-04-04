@@ -15,4 +15,4 @@ const Companhia = conexao.Schema({
         
     }
 });
-export default conexao.model("Companhia", Companhia)
+export default conexao.model("Companhia", Companhia);

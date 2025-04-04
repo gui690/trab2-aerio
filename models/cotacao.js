@@ -31,4 +31,4 @@ const Cotacao = conexao.Schema({
         required:true
     } ,
 });
-export default conexao.model("Cotacao", Cotacao)
+export default conexao.model("Cotacao", Cotacao);

@@ -18,4 +18,4 @@ const Usuario = conexao.Schema({
         type:Number,
     }
 });
-export default conexao.model("Usuario", Usuario)
+export default conexao.model("Usuario", Usuario);

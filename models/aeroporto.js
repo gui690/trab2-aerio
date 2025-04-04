@@ -15,4 +15,4 @@ const Aeroporto = conexao.Schema({
     },
 });
 
-export default conexao.model("Aeroporto", Aeroporto)
+export default conexao.model("Aeroporto", Aeroporto);
