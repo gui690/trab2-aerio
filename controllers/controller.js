@@ -2,7 +2,6 @@ import Companhia from "../models/companhia.js";
 import Aeroporto from "../models/aeroporto.js";
 import Usuario from "../models/usuario.js";
 import Cotacao from "../models/cotacao.js";
-import companhia from "../models/companhia.js";
 export async function home(req, res) {
   res.render("admin/index");
 }
@@ -41,7 +40,7 @@ export async function edtcompanhia(req, res) {
 export async function filtrarcompanhia(req, res) {
   const resposta = await Companhia.find({nome:new RegExp(req.body.pesquisar,"i")})
 
-  res.render("admin/companhia/lst", {Companhia:resultado});
+  res.render("admin/companhia/lst", {Companhia:resposta});
 }
 
 //cotação
