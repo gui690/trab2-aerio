@@ -29,6 +29,6 @@ const Cotacao = conexao.Schema({
     status:{
         type:String,
         required:true
-    } ,
+} ,
 });
 export default conexao.model("Cotacao", Cotacao);

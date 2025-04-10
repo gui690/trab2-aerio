@@ -11,36 +11,29 @@
             <table>
                 <thead>
                     <tr>
-                        <th>aeroporto</th>
-                        <th>Altura</th>
-                        <th>Peso</th>
-                        <th>Posição</th>
-                        <th>Opções</th>
+                        <th>Nome</th>
+                        <th>Localozação</th>
+                        <th>Foto</th>
+                       
                     </tr>
                 </thead>
                 <tbody>
+                    <%Aeroportos.forEach(function(aeroporto){%>
                     <tr>
-                        <td>Arthur</td>
-                        <td>1.90 cm</td>
-                        <td>86 KG</td>
-                        <td>Ala</td>
-                        <td class="action-buttons">
-                            <a href="/admin/aeroporto/edt/1" class="edit-btn">Editar</a>
+                        <td><%=aeroporto.nome%></td>
+                        <td><%=aeroporto.localizacao%></td>
+                        <td><%=aeroporto.foto%></td>
+                        
 
-                            <a href="/admin/aeroporto/del/1" class="delete-btn"><i class="fas fa-trash-alt icon"
-                                    style="color: #ffffff;"></i></i> Excluir</a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Lucas</td>
-                        <td>1.80 cm</td>
-                        <td>100 KG</td>
-                        <td>Pivô</td>
                         <td class="action-buttons">
-                            <a href="/admin/aeroporto/edt/2" class="edit-btn">Editar</a>
-                            <a href="/admin/aeroporto/del/2" class="delete-btn"><i class="fa-solid fa-trash"></i>
-                                Excluir</a>
+                            <a href="/admin/aeroporto/edt/<%=aeroporto.id%> " class="edit-btn">Editar</a>
                         </td>
+                        <td>
+                            <a href="/admin/aeroporto/del/<%=aeroporto._id%>">Deletar</a>
+                            </td>
+                    </tr>
+                    <%})%>
+                 
                     </tr>
                 </tbody>
             </table>

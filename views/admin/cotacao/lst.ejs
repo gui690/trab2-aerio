@@ -24,18 +24,21 @@
                 <tbody>
                     <%Cotacaos.forEach(function(cotacao){%>
                     <tr>
-                        <td><%=cotacao.origem=%></td>
-                        <td><%=cotacao.des=%></td>
-                        <td><%=cotacao.dataIda=%></td>
-                        <td><%=cotacao.dataVolta=%></td>
-                        <td><%=cotacao.nome=%></td>
-                        <td><%=cotacao.contato=%></td>
-                        <td><%=cotacao.status=%></td>
+                        <td><%=cotacao.id%></td>
+                        <td><%=cotacao.origem%></td>
+                        <td><%=cotacao.des%></td>
+                        <td><%=cotacao.dataIda%></td>
+                        <td><%=cotacao.dataVolta%></td>
+                        <td><%=cotacao.nome%></td>
+                        <td><%=cotacao.contato%></td>
+                        <td><%=cotacao.status%></td>
 
                         <td class="action-buttons">
-                            <a href="/admin/cotacao/edt/1" class="edit-btn">Editar</a>
-                            <a href="/admin/cotacao/del/1" class="delete-btn">Excluir</a>
+                            <a href="/admin/cotacao/edt/<%=cotacao.id%> " class="edit-btn">Editar</a>
                         </td>
+                        <td>
+                            <a href="/admin/cotacao/del/<%=cotacao._id%>">Deletar</a>
+                            </td>
                     </tr>
                     <%})%>
                  

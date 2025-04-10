@@ -1,4 +1,4 @@
-<%-include('.. /cabecalho.ejs')%>
+<%-include('../cabecalho.ejs')%>
 
     <body>
 
@@ -6,31 +6,33 @@
             <h1>Editar usuario</h1>
             <form action="post">
                 <div class="form-group">
-                    <label for="nome">Nome</label>
-                    <input type="text" id="nome" value="Time A" required placeholder="Nome do usuario">
+                    <input type="hidden" id="id" name="id" value="<%=Usuario.id%>"> <!--ID da cotacao -->
+                    
                 </div>
-
                 <div class="form-group">
-                    <label for="altura">Altura (em metros)</label>
-                    <input type="number" id="altura" name="altura" step="0.01" required placeholder="Ex: 1.85">
+                    <label for="nome">Nome do usuario  </label>
+                    <input type="text" id="nome" name="nome" value="<%=Usuario.nome%>" required>
                 </div>
-
+    
                 <div class="form-group">
-                    <label for="peso">Peso (em kg)</label>
-                    <input type="number" id="peso" name="peso" step="0.1" required placeholder="Ex: 80.5">
+                    <label for="email">Email</label>
+                    <input type="string" id="email" name="email" step="0.01" value="<%=Usuario.email%>" required >
                 </div>
-
+                
                 <div class="form-group">
-                    <label for="posicao">Posição</label>
-                    <select id="posicao" name="posicao">
-                        <option value="selecione">- Selecione -</option>
-                        <option value="zagueiro">Zagueiro</option>
-                        <option value="pivo">Pivô</option>
-                        <option value="ala">Ala</option>
-                    </select>
+                    <label for="cpf">CPF </label>
+                    <input type="number" id="cpf" name="cpf" step="0.1" value="<%=Usuario.cpf%>" required >
                 </div>
+                <div class="form-group">
+                    <label for="telefone">Telefone </label>
+                    <input type="number" id="telefone" name="telefone" step="0.1" value="<%=Usuario.telefone%>" required >
+                </div>
+            
+               
 
                 <button type="submit">Salvar Alterações</button>
+
+                <button type="submit" class="bnt cancelar">Cancelar</button>
             </form>
         </div>
 
