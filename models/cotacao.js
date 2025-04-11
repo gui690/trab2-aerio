@@ -8,14 +8,14 @@ const Cotacao = conexao.Schema({
     } ,
     Des:{
         type:String,
-        required:true
+        required:false
     } ,
     dataIda:{
-        type:Date,
+        type:String,
         required:true
     } ,
     dataVolta:{
-        type:Date,
+        type:String,
         required:true
     } ,
     nome:{
