@@ -18,13 +18,13 @@
                         <th>Nome</th>
                         <th>Contato</th>
                         <th>Status</th>
+                        <th colspan="2">Ações</th> <!-- Adiciona espaço para Editar e Deletar -->
                      
                     </tr>
                 </thead>
                 <tbody>
                     <%Cotacaos.forEach(function(cotacao){%>
                     <tr>
-                        <td><%=cotacao.id%></td>
                         <td><%=cotacao.origem%></td>
                         <td><%=cotacao.des%></td>
                         <td><%=cotacao.dataIda%></td>
@@ -34,10 +34,9 @@
                         <td><%=cotacao.status%></td>
 
                         <td class="action-buttons">
-                            <a href="/admin/cotacao/edt/<%=cotacao.id%> " class="edit-btn">Editar</a>
-                        </td>
-                        <td>
-                            <a href="/admin/cotacao/del/<%=cotacao._id%>">Deletar</a>
+                            <a href="/admin/cotacao/edt/<%= cotacao.id %>" class="edit-btn"><i class="fas fa-edit"></i> Editar</a>
+                            <a href="/admin/cotacao/del/<%= cotacao._id %>" class="delete-btn" onclick="return confirm('Tem certeza que deseja deletar esta cotação?')">Deletar</a>
+                            
                             </td>
                     </tr>
                     <%})%>

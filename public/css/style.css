@@ -1,791 +1,659 @@
-/*jogador*/
-
-/*edt*/
-/* Estilo Global */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;  /* Fundo escuro */
-    color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-/* Estilo da Container */
-.container {
-    max-width: 600px;
-    width: 100%;
-    background-color: #181818;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Efeito de animação da Container */
-.container:hover {
-    transform: translateY(-10px);
-}
-
-/* Título */
-h1 {
-    font-size: 2rem;
-    text-align: center;
-    color: #E50914; /* Cor vermelha do Netflix */
-    margin-bottom: 25px;
-    font-weight: bold;
-}
-
-/* Estilo do Formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-/* Estilo das Divs do Formulário */
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-size: 1.1rem;
-    color: #B3B3B3;
-    margin-bottom: 8px;
-}
-
-input, select {
-    background-color: #242424;
-    color: white;
-    padding: 14px 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-    transition: border-color 0.3s ease;
-}
-
-input::placeholder, select option {
-    color: #B3B3B3;
-}
-
-/* Foco nos campos de input */
-input:focus, select:focus {
-    border-color: #E50914;
-    outline: none;
-}
-
-/* Estilo do Botão */
-button {
-    background-color: #E50914;
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #B81B1B;
-    transform: scale(1.05);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    input, select {
-        font-size: 1rem;
-        padding: 12px 18px;
-    }
-
-    button {
-        font-size: 1rem;
-        padding: 12px 20px;
-    }
-}
-
-/* add */
-
-/* Estilo Global */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;  /* Fundo escuro */
-    color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-/* Estilo do Container do Formulário */
-.form-container {
-    max-width: 600px;
-    width: 100%;
-    background-color: #181818;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
-    transition: transform 0.3s ease-in-out;
-}
-
-/* Efeito de animação do formulário */
-.form-container:hover {
-    transform: translateY(-10px);
-}
-
-/* Título */
-h1 {
-    font-size: 2rem;
-    text-align: center;
-    color: #E50914; /* Cor vermelha do Netflix */
-    margin-bottom: 25px;
-    font-weight: bold;
-}
-
-/* Estilo do Formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-}
-
-/* Estilo das Divs do Formulário */
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-size: 1.1rem;
-    color: #B3B3B3;
-    margin-bottom: 8px;
-}
-
-input, select {
-    background-color: #242424;
-    color: white;
-    padding: 14px 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    font-size: 1rem;
-    width: 100%;
-    transition: border-color 0.3s ease;
-}
-
-input::placeholder, select option {
-    color: #B3B3B3;
-}
-
-/* Foco nos campos de input */
-input:focus, select:focus {
-    border-color: #E50914;
-    outline: none;
-}
-
-/* Estilo do Botão */
-button {
-    background-color: #E50914;
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-button:hover {
-    background-color: #B81B1B;
-    transform: scale(1.05);
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .form-container {
-        width: 90%;
-        padding: 20px;
-    }
-    
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    input, select {
-        font-size: 1rem;
-        padding: 12px 18px;
-    }
-
-    button {
-        font-size: 1rem;
-        padding: 12px 20px;
-    }
-}
-
-
-/* lst */
-
-/* Estilo Global */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-/* Estilo do Container */
-.container {
-    max-width: 1000px;
-    width: 100%;
-    margin: 50px auto;
-    background-color: #181818;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
-}
-
-/* Efeito de animação da Container */
-.container:hover {
-    transform: translateY(-10px);
-}
-
-/* Título */
-h1 {
-    font-size: 2.2rem;
-    text-align: center;
-    color: #E50914; /* Cor vermelha do Netflix */
-    margin-bottom: 25px;
-    font-weight: bold;
-}
-
-/* Estilo do Link para Adicionar Jogador */
-.add-jogador {
-    text-align: right;
-    margin-bottom: 20px;
-}
-
-.add-btn {
-    background-color: #E50914;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.add-btn:hover {
-    background-color: #B81B1B;
-    transform: scale(1.05);
-}
-
-/* Estilo da Tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 18px 15px;
-    text-align: left;
-}
-
-th {
-    background-color: #181818;
-    color: #B3B3B3;
-    font-size: 1.1rem;
-    font-weight: normal;
-}
-
-td {
-    background-color: #242424;
-    color: white;
-    font-size: 1rem;
-}
-
-tr:nth-child(even) {
-    background-color: #2A2A2A;
-}
-
-/* Estilo das Opções de Ação */
-.action-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.edit-btn, .delete-btn {
-    text-decoration: none;
-    font-weight: bold;
-    color: #E50914;
-    transition: text-decoration 0.2s ease;
-}
-
-.edit-btn:hover, .delete-btn:hover {
-    text-decoration: underline;
-}
-
-/* Estilo para o ícone da lixeira */
-.delete-btn {
-    display: flex;
-    align-items: center;
-}
-
-.delete-btn i {
-    margin-right: 5px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-        padding: 20px;
-    }
-
-    table {
-        width: 100%;
-    }
-
-    th, td {
-        font-size: 0.9rem;
-        padding: 12px 10px;
-    }
-
-    .add-btn {
-        font-size: 0.9rem;
-        padding: 10px 18px;
-    }
-}
-
-
-/* TIME */
-
-/* add */
-/* Estilo Global */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-/* Estilo da Container */
-.form-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #181818;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Título */
-h1 {
-    font-size: 2rem;
-    text-align: center;
-    color: #E50914; /* Cor vermelha do Netflix */
-    margin-bottom: 20px;
-}
-
-/* Estilo do Formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Estilo dos Campos do Formulário */
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-size: 1rem;
-    color: #B3B3B3;
-    margin-bottom: 5px;
-}
-
-input {
-    background-color: #242424;
-    color: white;
-    padding: 12px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-input:focus {
-    border-color: #E50914;
-    outline: none;
-}
-
-/* Botão de Envio */
-button {
-    background-color: #E50914;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #B81B1B;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .form-container {
-        width: 90%;
-        padding: 15px;
-    }
-    
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    input {
-        font-size: 0.9rem;
-    }
-
-    button {
-        font-size: 0.9rem;
-    }
-}
-
-/* edt */
-/* Estilo Global */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-/* Estilo da Container */
-.form-container {
-    max-width: 600px;
-    margin: 50px auto;
-    background-color: #181818;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Título */
-h1 {
-    font-size: 2rem;
-    text-align: center;
-    color: #E50914; /* Cor vermelha do Netflix */
-    margin-bottom: 20px;
-}
-
-/* Estilo do Formulário */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-/* Estilo dos Campos do Formulário */
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-
-label {
-    font-size: 1rem;
-    color: #B3B3B3;
-    margin-bottom: 5px;
-}
-
-input {
-    background-color: #242424;
-    color: white;
-    padding: 12px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    font-size: 1rem;
-}
-
-input:focus {
-    border-color: #E50914;
-    outline: none;
-}
-
-/* Botão de Envio */
-button {
-    background-color: #E50914;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-weight: bold;
-}
-
-button:hover {
-    background-color: #B81B1B;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .form-container {
-        width: 90%;
-        padding: 15px;
-    }
-    
-    h1 {
-        font-size: 1.5rem;
-    }
-
-    input {
-        font-size: 0.9rem;
-    }
-
-    button {
-        font-size: 0.9rem;
-    }
-}
-
-
-/* lst */
-/* Estilo Global */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212;
-    color: white;
-    margin: 0;
-    padding: 0;
-}
-
-/* Estilo do Container */
-.container {
-    max-width: 900px;
-    margin: 50px auto;
-    background-color: #181818;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-}
-
-/* Título */
-h1 {
-    font-size: 2rem;
-    text-align: center;
-    color: #E50914; /* Cor vermelha do Netflix */
-    margin-bottom: 20px;
-}
-
-/* Estilo do Link para Adicionar Time */
-.add-time {
-    text-align: right;
-    margin-bottom: 20px;
-}
-
-.add-btn {
-    background-color: #E50914;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-}
-
-.add-btn:hover {
-    background-color: #B81B1B;
-}
-
-/* Estilo da Tabela */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-th, td {
-    padding: 15px;
-    text-align: left;
-}
-
-th {
-    background-color: #181818;
-    color: #B3B3B3;
-    font-size: 1rem;
-}
-
-td {
-    background-color: #242424;
-    color: white;
-    font-size: 1rem;
-}
-
-tr:nth-child(even) {
-    background-color: #2A2A2A;
-}
-
-/* Estilo das Opções de Ação */
-.action-buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.edit-btn, .delete-btn {
-    text-decoration: none;
-    font-weight: bold;
-    color: #E50914;
-}
-
-.edit-btn:hover, .delete-btn:hover {
-    text-decoration: underline;
-}
-
-/* Estilo para o ícone da lixeira */
-.delete-btn {
-    display: flex;
-    align-items: center;
-}
-
-.delete-btn i {
-    margin-right: 5px;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    table {
-        width: 100%;
-    }
-
-    th, td {
-        font-size: 0.9rem;
-    }
-
-    .add-btn {
-        font-size: 0.9rem;
-    }
-}
+/* style.css */
 
 /*index*/
 
-/* Estilo Global */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #121212; /* Fundo escuro */
-    color: white;
+/* style.css */
+
+/* Reset básico */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to top, #cbe9f7, #e6f4fc);
+    color: #333;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    justify-content: start;
+    padding: 2rem;
 }
 
-/* Fundo Animado */
+/* Fundo decorativo */
 .background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-    filter: brightness(30%);
+    background: url('https://images.unsplash.com/photo-1504198458649-3128b932f49b?auto=format&fit=crop&w=1500&q=80') no-repeat center center;
+    background-size: cover;
+    opacity: 0.1;
     z-index: -1;
 }
 
 /* Cabeçalho */
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 2.5rem;
-    color: #E50914; /* Cor do Netflix */
-    margin-bottom: 30px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.header i {
+.club-name {
     font-size: 3rem;
+    font-weight: bold;
+    color: #0077b6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Título */
 h1 {
     font-size: 2rem;
-    text-align: center;
-    color: #E50914;
-    margin-bottom: 40px;
+    margin-bottom: 2rem;
+    color: #023e8a;
 }
 
-/* Links de Navegação */
+/* Links */
 .links {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .link-btn {
-    background-color: #E50914;
+    background-color: #0096c7;
     color: white;
-    padding: 15px 30px;
+    padding: 1rem 2rem;
     text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
 }
 
 .link-btn:hover {
-    background-color: #B81B1B; /* Cor de hover */
-    transform: scale(1.05);
+    background-color: #00b4d8;
+    transform: translateY(-3px);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .header {
-        font-size: 2rem;
-    }
-    
-    h1 {
-        font-size: 1.5rem;
-    }
-    
-    .link-btn {
-        font-size: 1rem;
-        padding: 10px 20px;
-    }
-    
-    .links {
-        flex-direction: column;
-        align-items: center;
-    }
+
+/* Cabeçalho */
+.header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
 }
+
+.club-name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #0077b6;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #023e8a;
+}
+
+/* Links */
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.link-btn {
+    background-color: #0096c7;
+    color: white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1.1rem;
+}
+
+.link-btn:hover {
+    background-color: #00b4d8;
+    transform: translateY(-3px);
+}
+
+
+/* Reset e ajustes base */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to top, #d9f1ff, #ffffff);
+    min-height: 100vh;
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* Navbar personalizada */
+.navbar {
+    background: linear-gradient(90deg, #0077b6, #00b4d8);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.nav-link {
+    color: #e0f7ff !important;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #ffffff !important;
+    text-decoration: underline;
+}
+
+/* Fundo com imagem temática (avião e céu) */
+body::before {
+    content: "";
+    background: url('https://images.unsplash.com/photo-1504198458649-3128b932f49b?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.08;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    z-index: -1;
+}
+
+/* Estilo de cards ou conteúdo */
+.card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões adicionais */
+.btn-primary {
+    background-color: #0096c7;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #00b4d8;
+}
+
+/* Títulos */
+h1, h2, h3 {
+    color: #023e8a;
+}
+
+
+/*USUARIO*/
+
+/*ADD*/
+
+/* Estilo do container do formulário */
+.form-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Título do formulário */
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0077b6;
+    font-size: 2rem;
+}
+
+/* Grupos de formulário */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+/* Labels */
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #023e8a;
+}
+
+/* Inputs */
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #00b4d8;
+    outline: none;
+}
+
+/* Botões */
+button[type="submit"] {
+    background-color: #0096c7;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #00b4d8;
+}
+
+/* Botão cancelar */
+button.cancelar {
+    background-color: #adb5bd;
+}
+
+button.cancelar:hover {
+    background-color: #868e96;
+}
+
+
+/*EDT*/
+
+/* Container geral dos formulários */
+.container, .form-container {
+    max-width: 600px;
+    margin: 3rem auto;
+    padding: 2.5rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Título centralizado */
+.container h1, .form-container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0077b6;
+    font-size: 2rem;
+}
+
+/* Estilo dos campos */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #023e8a;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #00b4d8;
+    outline: none;
+}
+
+/* Botões */
+button[type="submit"],
+button[type="button"] {
+    background-color: #0096c7;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-right: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover,
+button[type="button"]:hover {
+    background-color: #00b4d8;
+}
+
+/* Botão cancelar */
+button.cancelar {
+    background-color: #adb5bd;
+}
+
+button.cancelar:hover {
+    background-color: #868e96;
+}
+
+
+/*lst*/
+
+/* Container da listagem */
+.container {
+    max-width: 90%;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
+}
+
+/* Título */
+.container h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0077b6;
+}
+
+/* Botão de adicionar */
+.add-usuario {
+    text-align: right;
+    margin-bottom: 1rem;
+}
+
+.add-btn {
+    background-color: #0077b6;
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.add-btn:hover {
+    background-color: #00b4d8;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 1rem;
+}
+
+thead {
+    background-color: #0096c7;
+    color: white;
+}
+
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+tr:hover {
+    background-color: #f1f9ff;
+}
+
+/* Botões de ação */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.edit-btn,
+td a[href*="del"] {
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.edit-btn {
+    background-color: #00b4d8;
+}
+
+.edit-btn:hover {
+    background-color: #0096c7;
+}
+
+td a[href*="del"] {
+    background-color: #e63946;
+}
+
+td a[href*="del"]:hover {
+    background-color: #c1121f;
+}
+
+
+/*COOTAÇÃO*/
+
+/*ADD*/
+
+.container {
+    max-width: 800px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #0077b6;
+}
+
+form .form-group {
+    margin-bottom: 1.2rem;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #023e8a;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+button[type="submit"],
+button.cancelar {
+    margin-top: 1.5rem;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #0077b6;
+    color: white;
+    margin-right: 0.5rem;
+}
+
+button[type="submit"]:hover {
+    background-color: #0096c7;
+}
+
+button.cancelar {
+    background-color: #e63946;
+    color: white;
+}
+
+button.cancelar:hover {
+    background-color: #c1121f;
+}
+
+
+/*EDT*/
+.bnt.salvar {
+    background-color: #0077b6;
+    color: white;
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+  }
+  
+  .bnt.salvar:hover {
+    background-color: #0096c7;
+  }
+  
+/*LST*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.8rem;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+.add-btn {
+    background-color: #2a9d8f;
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+
+.edit-btn {
+    background-color: #0077b6;
+}
+
+.delete-btn {
+    background-color: #e63946;
+}
+
+.edit-btn:hover, .delete-btn:hover, .add-btn:hover {
+    opacity: 0.8;
+}
+td a.edit-btn,
+td a.delete-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.edit-btn {
+    background-color: #0077b6;
+}
+
+.delete-btn {
+    background-color: #e63946;
+    margin-left: 5px;
+}
+
+
+
+/*COMPANHIA*/
+
+/*ADD*/
+.form-container {
+    width: 500px;
+    margin: 40px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #008cba;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  
+  .form-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  
+  .btn {
+    flex: 1;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .btn.confirm {
+    background-color: #008cba;
+    color: white;
+  }
+  
+  .btn.cancel {
+    background-color: #f44336;
+    color: white;
+  }
+  
+/*EDT*/
+
+/*LST*/
+
+/*AEROPORTO*/
+
+/*ADD*/
+
+/*EDT*/
+
+/*LST*/

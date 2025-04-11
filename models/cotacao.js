@@ -11,11 +11,11 @@ const Cotacao = conexao.Schema({
         required:false
     } ,
     dataIda:{
-        type:String,
+        type:Date,
         required:true
     } ,
     dataVolta:{
-        type:String,
+        type:Date,
         required:true
     } ,
     nome:{
