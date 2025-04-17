@@ -25,8 +25,8 @@
                 <tbody>
                     <%Cotacaos.forEach(function(cotacao){%>
                     <tr>
-                        <td><%=cotacao.origem%></td>
-                        <td><%=cotacao.des%></td>
+                        <td><%=cotacao.origem!=null?cotacao.origem.nome:""%></td>
+                        <td><%=cotacao.des!=null?cotacao.des.nome:""%></td>
                         <td><%=cotacao.dataIda%></td>
                         <td><%=cotacao.dataVolta%></td>
                         <td><%=cotacao.nome%></td>

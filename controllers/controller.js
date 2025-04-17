@@ -46,13 +46,19 @@ export async function filtrarcompanhia(req, res) {
 //cotação
 
 export async function abreaddcotacao(req, res) {
-  const resultado = await Cotacao.find({}).catch(function(err){console.log(err)});
-  res.render("admin/cotacao/add",{Cotacao:resultado});
+  const resultado = await Aeroporto.find({}).catch(function(err){console.log(err)});
+  res.render("admin/cotacao/add",{Aeroporto:resultado});
 }
 export async function addcotacao(req, res) {
+      var caeroporto = null;
+      //se vier aeroporto,busca
+      if(req.body.aeroporto!=null)
+      {
+        caeroporto=await Aeroporto.findById(req.body.aeroporto)
+      }
   await Cotacao.create({
-    origem: req.body.origem,
-    des: req.body.des,
+    origem: caeroporto,
+    des: caeroporto,
     dataIda: req.body.dataIda,
     dataVolta: req.body.dataVolta,
     nome: req.body.nome,
@@ -61,10 +67,9 @@ export async function addcotacao(req, res) {
   });
   res.redirect("/admin/cotacao/add");
 }
+
 export async function listarcotacao(req, res) {
-  const resultado = await Cotacao.find({}).catch(function (err) {
-    console.log(err);
-  });
+  const resultado = await Cotacao.find({}).populate('aeroporto').catch(function (err) {console.log(err)});
   res.render("admin/cotacao/lst", { Cotacaos: resultado });
 }
 export async function deletacotacao(req, res) {
@@ -73,7 +78,8 @@ export async function deletacotacao(req, res) {
 }
 export async function abreedtcotacao(req, res) {
   const resultado = await Cotacao.findById(req.params.id)
-  res.render("admin/cotacao/edt", {Cotacao: resultado});
+  const caeroporto = await Aeroporto.find({}).catch(function(err){console.log(err)});
+  res.render("admin/cotacao/edt", {Cotacao: resultado, Aeroporto:caeroporto});
 }
 export async function edtcotacao(req, res) {
   await Cotacao.findByIdAndUpdate(req.params.id, req.body)

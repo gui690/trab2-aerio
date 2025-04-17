@@ -3,11 +3,11 @@ import conexao from '../config/conexao.js';
 
 const Cotacao = conexao.Schema({
     origem:{
-        type:String,
-        required:true
+        type:conexao.Types.Objectld,ref:"Aeroporto",
+        required:false
     } ,
     Des:{
-        type:String,
+        type:conexao.Types.Objectld,ref:"Aeroporto",
         required:false
     } ,
     dataIda:{
