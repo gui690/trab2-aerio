@@ -44,7 +44,22 @@ export async function abreedtcompanhia(req, res) {
   res.render("admin/companhia/edt", {Companhia:resultado});
 }
 export async function edtcompanhia(req, res) {
-  await Companhia.findByIdAndUpdate(req.params.id, req.body)
+      
+  var fotoupload;
+  if(req.file!=null)
+  {
+    fotoupload = req.file.filename
+  }
+  else{
+    fotoupload=null
+  }
+ 
+  await Companhia.findByIdAndUpdate(req.params.id, 
+    { nome:req.body.nome,
+      pais_o:req.body.estadio,
+      foto:fotoupload
+    }
+  )
   res.redirect("/admin/companhia/lst");
 }
 export async function filtrarcompanhia(req, res) {

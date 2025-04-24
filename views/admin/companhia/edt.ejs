@@ -4,23 +4,25 @@
 
         <div class="container">
             <h1>Editar Companhia aeria</h1>
-            <form action="/admin/companhia/edt" method="post">                <div class="form-group">
+            <form method="post">                <div class="form-group">
                     <input type="hidden" id="id" name="id" value="<%=Companhia.id%>"> <!--ID da cotacao -->
                     
                 </div>
                 <div class="form-group">
                     <label for="nome">Nome da Companhia aeria  </label>
-                    <input type="text" id="nome" name="nome"  required>
+                    <input type="text" id="nome" name="nome"  value="<%=Companhia.nome%>" required>
                 </div>
     
                 <div class="form-group">
                     <label for="pais_o">País de Origem</label>
-                    <input type="text" id="pais_o" name="pais_o" step="0.01" required >
+                    <input type="text" id="pais_o" name="pais_o" step="0.01" value="<%=Companhia.pais_o%>" required >
                 </div>
                 
                 <div class="form-group">
+                      <!--Imagem Atual-->
+                      <img src="/arquivos/<%=Companhia.foto%>" class="Imenor"/>
                     <label for="foto">Foto</label>
-                    <input type="text" id="foto" name="foto" step="0.1"   required>
+                    <input type="text" id="foto" name="foto" step="0.1"   value="<%=Companhia.foto%>">
                 </div>
     
                 <button type="submit">Salvar Alterações</button>

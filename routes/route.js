@@ -62,7 +62,7 @@ router.post('/admin/cotacao/lst', filtrarcotacao);
 router.get('/admin/cotacao/del/:id', deletacotacao);
 //rota do modelo cotacao (editar)
 router.get('/admin/cotacao/edt/:id', abreedtcotacao);
-router.post('/admin/cotacao/edt/:id', edtcotacao);
+router.post('/admin/cotacao/edt/:id', upload.single('foto'),edtcotacao);
 
 //aeroporto
 
@@ -91,7 +91,7 @@ router.post('/admin/usuario/lst', filtrarusuario);
 router.get('/admin/usuario/del/:id', deletausuario);
 //rota do modelo usuario (editar)
 router.get('/admin/usuario/edt/:id', abreedtusuario);
-router.post('/admin/usuario/edt/:id', edtusuario);
+router.post('/admin/usuario/edt/:id', upload.single('foto'),edtusuario);
 
 //companhia
 
