@@ -2,8 +2,11 @@
 <body>
 
     <div class="form-container">
+
+        <button type="button" class="bnt voltar" onclick="window.history.back()">Voltar</button>
+
         <h1>Adicionar Aeroporto  </h1>
-        <form action="/admin/aeroporto/add" method="post">            
+        <form action="/admin/aeroporto/add" method="post" enctype="multipart/form-data">            
             <div class="form-group">
                 <input type="hidden" id="id" name="id" value="<%=Aeroporto.id%>"> <!--ID da cotacao -->
                 
@@ -20,7 +23,7 @@
             
             <div class="form-group">
                 <label for="foto">Foto </label>
-                <input type="text" id="foto" name="foto" step="0.1" vrequired >
+                <input type="file" id="foto" name="foto" step="0.1" vrequired >
             </div>
 
             <button type="submit">Adicionar Aeroporto</button>

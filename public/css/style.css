@@ -645,7 +645,10 @@ td a.delete-btn {
     background-color: #f44336;
     color: white;
   }
-  
+.Imenor{
+    width: 25%;
+    height: 25%;
+}
 /*EDT*/
 
 /*LST*/

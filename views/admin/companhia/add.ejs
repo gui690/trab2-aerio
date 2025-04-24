@@ -2,8 +2,11 @@
 <body>
 
     <div class="form-container">
+        <button type="button" class="bnt voltar" onclick="window.history.back()">Voltar</button>
         <h1>Companhia aeria  </h1>
-        <form action="/admin/companhia/add" method="post">            <div class="form-group">
+        <form action="/admin/companhia/add" method="post" enctype="multipart/form-data">          
+            
+            <div class="form-group">
                 <label for="nome">Nome da Companhia aeria  </label>
                 <input type="text" id="nome" name="nome" required >
             </div>
@@ -15,7 +18,7 @@
             
             <div class="form-group">
                 <label for="foto">Foto</label>
-                <input type="text" id="foto" name="foto" step="0.1" required>
+                <input type="file" id="foto" name="foto" step="0.1" required>
             </div>
 
             <button type="submit">Adicionar Companhia</button>

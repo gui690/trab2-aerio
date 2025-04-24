@@ -12,6 +12,7 @@ const Aeroporto = conexao.Schema({
     },
     foto:{
         type:String,
+        required:false
     },
 });
 

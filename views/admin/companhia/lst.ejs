@@ -14,8 +14,7 @@
                     <th scope="col">Nome</th>
                     <th scope="col">País de origem</th>
                     <th scope="col">Foto</th>
-                    <th scope="col">Editar</th>
-                    <th scope="col">Deletar</th>
+                    <th colspan="2">Ações</th>
       
                   </tr>
                 </thead>
@@ -29,8 +28,8 @@
                         <%=companhia.pais_o%>
                       </td>
                       <td>
-                        <%=companhia.foto%>
-                      </td>
+                        <img src="/arquivos/<%=companhia.foto%>" class="Imenor" />
+                    </td>
                       <td>
                         <a href="/admin/companhia/edt/<%=companhia._id%>">Editar</a>
                       </td>

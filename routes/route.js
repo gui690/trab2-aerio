@@ -1,5 +1,19 @@
 import express from 'express'
-const router = express.Router()
+const router = express.Router();
+
+import multer from 'multer';
+var storage = multer.diskStorage({
+    filename: function(req, file, cb){
+    let nome = Date.now() + "-" + file.originalname
+    cb(null, nome)
+    },
+    destination: function(req, file, cb){
+    let path = "./public/arquivos"
+    cb(null, path)
+    }
+    })
+    var upload = multer({ storage })
+    
 
 import {
     home,
@@ -54,7 +68,7 @@ router.post('/admin/cotacao/edt/:id', edtcotacao);
 
 //create do modelo aeroporto (create)
 router.get('/admin/aeroporto/add', abreaddaeroporto);
-router.post('/admin/aeroporto/add', addaeroporto);
+router.post('/admin/aeroporto/add', upload.single('foto'),addaeroporto);
 //rotas do modelo aeroporto (read)
 router.get('/admin/aeroporto/lst', listaraeroporto);
 router.post('/admin/aeroporto/lst', filtraraeroporto);
@@ -83,7 +97,7 @@ router.post('/admin/usuario/edt/:id', edtusuario);
 
 //create do modelo usuario (create)
 router.get('/admin/companhia/add', abreaddcompanhia);
-router.post('/admin/companhia/add', addcompanhia);
+router.post('/admin/companhia/add', upload.single('foto'),addcompanhia);
 //rotas do modelo companhia (read)
 router.get('/admin/companhia/lst', listarcompanhia);
 router.post('/admin/companhia/lst', filtrarcompanhia);

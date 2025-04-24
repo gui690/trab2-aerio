@@ -10,10 +10,20 @@ export async function abreaddcompanhia(req, res) {
   res.render("admin/companhia/add");
 }
 export async function addcompanhia(req, res) {
+    
+  var fotoupload;
+  if(req.file!=null)
+  {
+    fotoupload = req.file.filename
+  }
+  else{
+    fotoupload=null
+  }
+ 
   await Companhia.create({
     nome: req.body.nome,
-    pais_o: req.body.pais_o,
-    foto: req.body.foto,
+    pais_o:req.body.pais_o,
+    foto:fotoupload,
   });
   res.redirect("/admin/companhia/add");
 }
@@ -98,10 +108,21 @@ export async function abreaddaeroporto(req, res) {
   res.render("admin/aeroporto/add",{Aeroporto: resultado});
 }
 export async function addaeroporto(req, res) {
+  
+  var fotoupload;
+  if(req.file!=null)
+  {
+    fotoupload = req.file.filename
+  }
+  else{
+    fotoupload=null
+  }
+
+
   await Aeroporto.create({
     nome: req.body.nome,
     localizacao: req.body.localizacao,
-    dataIda: req.body.dataIda,
+    foto: fotoupload,
   });
   res.redirect("/admin/aeroporto/add");
 }
