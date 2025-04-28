@@ -156,7 +156,23 @@ export async function abreedtaeroporto(req, res) {
   res.render("admin/aeroporto/edt", {Aeroporto:resultado});
 }
 export async function edtaeroporto(req, res) {
-  await Aeroporto.findByIdAndUpdate(req.params.id, req.body)
+
+  var fotoupload;
+  if(req.file!=null)
+  {
+    fotoupload = req.file.filename
+  }
+  else{
+    fotoupload=null
+  }
+  await Aeroporto.findByIdAndUpdate(req.params.id,
+    
+      { nome:req.body.nome,
+        localizacao:req.body.localizacao,
+        foto:fotoupload
+      }
+    
+  )
   res.redirect("/admin/aeroporto/lst");
 }
 export async function filtraraeroporto(req, res) {
