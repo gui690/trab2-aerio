@@ -2,14 +2,14 @@ import conexao from '../config/conexao.js';
 
 
 const Cotacao = conexao.Schema({
-    origem:{
-        type:String,
-        required:false
-    } ,
-    Des:{
-        type:String,
-        required:false
-    } ,
+    origem: {
+        type: conexao.Schema.Types.ObjectId,
+        ref: 'Aeroporto'
+      },
+      des: {
+        type: conexao.Schema.Types.ObjectId,
+        ref: 'Aeroporto'
+      },
     dataIda:{
         type:Date,
         required:true

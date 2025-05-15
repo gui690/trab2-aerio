@@ -1,8 +1,15 @@
-<%-include('../cabecalho.ejs')%>
+<%-include('../cabecalho.ejs')%> 
 
+
+  
     <body>
-
+       
         <div class="container">
+            <form action="/admin/cotacao/lst" method="post" class="form-inline" style="margin-bottom: 20px;">
+                <input type="text" name="pesquisar" placeholder="Pesquisar por nome" required>
+                <button type="submit">Pesquisar</button>
+              </form>
+              
             <h1>Cotação</h1>
             <div class="add-cotacao">
                 <a href="/admin/cotacao/add" class="add-btn">+ Cotação</a>
