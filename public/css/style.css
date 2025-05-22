@@ -1,201 +1,119 @@
-/* style.css */
-
-/*index*/
-
-/* style.css */
+/*INDEX*/
 
 /* Reset básico */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Fundo preto */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to top, #cbe9f7, #e6f4fc);
-    color: #333;
     min-height: 100vh;
+    background-color: #000; /* fundo preto puro */
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
-    padding: 2rem;
-}
-
-/* Fundo decorativo */
-.background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('https://images.unsplash.com/photo-1504198458649-3128b932f49b?auto=format&fit=crop&w=1500&q=80') no-repeat center center;
-    background-size: cover;
-    opacity: 0.1;
-    z-index: -1;
-}
-
-/* Cabeçalho */
-.header {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.club-name {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #0077b6;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Título */
-h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #023e8a;
-}
-
-/* Links */
-.links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
     justify-content: center;
-}
-
-.link-btn {
-    background-color: #0096c7;
-    color: white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-size: 1.1rem;
-}
-
-.link-btn:hover {
-    background-color: #00b4d8;
-    transform: translateY(-3px);
-}
-
-
-/* Cabeçalho */
-.header {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-.club-name {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #0077b6;
-    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Título */
-h1 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #023e8a;
-}
-
-/* Links */
-.links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-}
-
-.link-btn {
-    background-color: #0096c7;
-    color: white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-size: 1.1rem;
-}
-
-.link-btn:hover {
-    background-color: #00b4d8;
-    transform: translateY(-3px);
-}
-
-
-/* Reset e ajustes base */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(to top, #d9f1ff, #ffffff);
-    min-height: 100vh;
-    background-attachment: fixed;
+    color: #fff;
     position: relative;
 }
 
-/* Navbar personalizada */
-.navbar {
-    background: linear-gradient(90deg, #0077b6, #00b4d8);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+/* Painel com efeito glass + degradê de azuis */
+.background {
+    width: 90%;
+    max-width: 600px;
+    padding: 40px;
+    background: linear-gradient(135deg, rgba(30, 60, 114, 0.6), rgba(42, 82, 152, 0.6), rgba(0, 212, 255, 0.6));
+    border: 2px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    text-align: center;
 }
 
-.navbar-brand {
-    font-size: 1.8rem;
+/* Cabeçalho */
+.header {
+    margin-bottom: 20px;
+}
+
+.club-name {
+    font-size: 2.8rem;
     font-weight: bold;
-    color: #fff !important;
+    color: #ffffff;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
 }
 
-.nav-link {
-    color: #e0f7ff !important;
-    transition: color 0.3s;
+/* Título */
+h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
 }
 
-.nav-link:hover {
-    color: #ffffff !important;
+/* Links */
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.link-btn {
+    text-decoration: none;
+    background: transparent;
+    border: 2px solid #00f2fe;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.link-btn:hover {
+    background: linear-gradient(145deg, #4facfe, #00f2fe);
+    color: #000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+
+
+/* Cabeçalho */
+.custom-navbar {
+    background: linear-gradient(135deg, #1e3c72, #2a5298); /* Degradê azul moderno */
+    padding: 0.75rem 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.custom-navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+.custom-navbar .nav-link {
+    color: #e0f0ff;
+    margin-left: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffffff;
     text-decoration: underline;
 }
 
-/* Fundo com imagem temática (avião e céu) */
-body::before {
-    content: "";
-    background: url('https://images.unsplash.com/photo-1504198458649-3128b932f49b?auto=format&fit=crop&w=1500&q=80') no-repeat center center fixed;
-    background-size: cover;
-    opacity: 0.08;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    position: absolute;
-    z-index: -1;
+.navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Estilo de cards ou conteúdo */
-.card {
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 10px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,0.8%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-
-/* Botões adicionais */
-.btn-primary {
-    background-color: #0096c7;
-    border: none;
-    transition: background-color 0.3s;
-}
-
-.btn-primary:hover {
-    background-color: #00b4d8;
-}
-
-/* Títulos */
-h1, h2, h3 {
-    color: #023e8a;
-}
-
 
 /*USUARIO*/
 
