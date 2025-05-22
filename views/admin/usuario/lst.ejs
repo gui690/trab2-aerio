@@ -3,10 +3,14 @@
     <body>
 
         <div class="container">
+            <form action="/admin/usuario/lst" method="post" class="form-inline" style="margin-bottom: 20px;">
+                <input type="text" name="pesquisar" placeholder="Pesquisar por nome" required>
+                <button type="submit">Pesquisar</button>
+              </form>
             <h1>usuario</h1>
-            <div class="add-usuario">
+          
                 <a href="/admin/usuario/add" class="add-btn">+ usuario</a>
-            </div>
+           
 
             <table>
                 <thead>
@@ -15,11 +19,11 @@
                         <th>Email</th>
                         <th>CPF</th>
                         <th>Telefone</th>
-                        <td>Opções</td>
+                        <th colspan="2">Ações</th> <!-- Adiciona espaço para Editar e Deletar -->
                     </tr>
                 </thead>
                 <tbody>
-                    <%Usuarios.forEach(function(usuario){%>
+                    <%Usuario.forEach(function(usuario){%>
                     <tr>
 
                         <td><%=usuario.nome%></td>

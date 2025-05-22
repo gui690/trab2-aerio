@@ -3,6 +3,10 @@
     <body>
 
         <div class="container">
+          <form action="/admin/companhia/lst" method="post" class="form-inline" style="margin-bottom: 20px;">
+            <input type="text" name="pesquisar" placeholder="Pesquisar por nome" required>
+            <button type="submit">Pesquisar</button>
+          </form>
             <h1>Companhia aeria</h1>
             <div class="add-companhia">
                 <a href="/admin/companhia/add" class="add-btn">+ Companhia</a>
@@ -19,7 +23,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <%Companhias.forEach(function(companhia){%>
+                  <%Companhia.forEach(function(companhia){%>
                     <tr>
                       <td>
                         <%=companhia.nome%>

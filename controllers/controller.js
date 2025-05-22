@@ -31,7 +31,7 @@ export async function listarcompanhia(req, res) {
   const resultado = await Companhia.find({}).catch(function (err) {
     console.log(err);
   });
-  res.render("admin/companhia/lst", { Companhias: resultado });
+  res.render("admin/companhia/lst", { Companhia: resultado });
 }
 export async function deletacompanhia(req, res) {
   await Companhia.findByIdAndDelete(req.params.id)
@@ -72,7 +72,10 @@ export async function filtrarcompanhia(req, res) {
 
 export async function abreaddcotacao(req, res) {
   const resultado = await Aeroporto.find({}).catch(function(err){console.log(err)});
-  res.render("admin/cotacao/add",{Aeroporto:resultado});
+  const resultado2 = await Usuario.find({}).catch(function(err){console.log(err)});
+  
+
+  res.render("admin/cotacao/add",{Aeroporto:resultado, Usuarios:resultado2, });
 }
 export async function addcotacao(req, res) {
   var cusuario = null;
@@ -163,7 +166,7 @@ export async function listaraeroporto(req, res) {
   const resultado = await Aeroporto.find({}).catch(function (err) {
     console.log(err);
   });
-  res.render("admin/aeroporto/lst", { Aeroportos: resultado });
+  res.render("admin/aeroporto/lst", { Aeroporto: resultado });
 }
 export async function deletaaeroporto(req, res) {
   await Aeroporto.findByIdAndDelete(req.params.id)
@@ -194,7 +197,9 @@ export async function edtaeroporto(req, res) {
   res.redirect("/admin/aeroporto/lst");
 }
 export async function filtraraeroporto(req, res) {
-  const resposta = await Aeroporto.find({nome:new RegExp(req.body.pesquisar,"i")})
+  const resposta = await Aeroporto.find({
+    nome:new RegExp(req.body.pesquisar,"i")
+  })
   res.render("admin/aeroporto/lst", {Aeroporto: resposta});
 }
 
@@ -217,7 +222,7 @@ export async function listarusuario(req, res) {
   const resultado = await Usuario.find({}).catch(function (err) {
     console.log(err);
   });
-  res.render("admin/usuario/lst", { Usuarios: resultado });
+  res.render("admin/usuario/lst", { Usuario: resultado });
 }
 export async function deletausuario(req, res) {
   await Usuario.findByIdAndDelete(req.params.id)

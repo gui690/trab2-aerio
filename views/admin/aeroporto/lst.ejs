@@ -3,6 +3,12 @@
     <body>
 
         <div class="container">
+
+            <form action="/admin/aeroporto/lst" method="post" class="form-inline" style="margin-bottom: 20px;">
+                <input type="text" name="pesquisar" placeholder="Pesquisar por nome" required>
+                <button type="submit">Pesquisar</button>
+              </form>
+              
             <h1>aeroporto</h1>
             <div class="add-aeroporto">
                 <a href="/admin/aeroporto/add" class="add-btn">+ aeroporto</a>
@@ -12,14 +18,14 @@
                 <thead>
                     <tr>
                         <th>Nome</th>
-                        <th>Localozação</th>
+                        <th>Localização</th>
                         <th>Foto</th>
                         <th colspan="2">Ações</th> <!-- Adiciona espaço para Editar e Deletar -->
                        
                     </tr>
                 </thead>
                 <tbody>
-                    <%Aeroportos.forEach(function(aeroporto){%>
+                    <%Aeroporto.forEach(function(aeroporto){%>
                     <tr>
                         <td><%=aeroporto.nome%></td>
                         <td><%=aeroporto.localizacao%></td>
