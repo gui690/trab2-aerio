@@ -12,7 +12,7 @@
                 <a href="/admin/companhia/add" class="add-btn">+ Companhia</a>
             </div>
 
-            <table class="table table-striped table-dark">
+            <table>
                 <thead>
                   <tr>
                     <th scope="col">Nome</th>
@@ -34,12 +34,10 @@
                       <td>
                         <img src="/arquivos/<%=companhia.foto%>" class="Imenor" />
                     </td>
-                      <td>
-                        <a href="/admin/companhia/edt/<%=companhia._id%>">Editar</a>
-                      </td>
+                    <td class="action-buttons">
+                      <a href="/admin/companhia/edt/<%= companhia.id %>" class="edit-btn"><i class="fas fa-edit"></i> Editar</a>
+                      <a href="/admin/companhia/del/<%= companhia._id %>" class="delete-btn" onclick="return confirm('Tem certeza que deseja deletar este dado?')">Deletar</a>
                       
-                      <td>
-                      <a href="/admin/companhia/del/<%=companhia._id%>">Deletar</a>
                       </td>
                     </tr>
       

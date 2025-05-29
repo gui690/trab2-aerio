@@ -43,23 +43,21 @@
                     
             
    
-                <label for="nome">Nome  </label>
+                <label for="cliente">Nome  </label>
                
-                <select id="nome" name="nome" required>
-                    <option value="" disabled selected hidden>Selecione seu Nome</option>
+                <select id="cliente" name="cliente" required>
+                    <option value="" disabled selected hidden>Selecione um Nome</option>
                     <% Usuarios.forEach(function(usuario) { %>
-                        <option value="<%= usuario.id %>"><%= usuario.nome %></option>
+                        <option value="<%= usuario.nome %>"><%= usuario.nome %></option>
                     <% }); %>
                 </select>
-       
 
     
                 <label for="contato">Contato  </label>
 
                 <select id="contato" name="contato" required>
-                    <option value="" disabled selected hidden>Selecione seu numero</option>
                     <% Usuarios.forEach(function(usuario) { %>
-                        <option value="<%= usuario.id %>"><%= usuario.telefone %></option>
+                        <option value="<%= usuario.telefone %>"><%= usuario.telefone %></option>
                     <% }); %>
                 </select>
           

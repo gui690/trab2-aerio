@@ -20,9 +20,10 @@
                 
                 <div class="form-group">
                       <!--Imagem Atual-->
+                      <input type="text" name="fotoantiga" value="<%=Companhia.foto%>">
                       <img src="/arquivos/<%=Companhia.foto%>" class="Imenor"/>
                     <label for="foto">Foto</label>
-                    <input type="text" id="foto" name="foto" step="0.1"   value="<%=Companhia.foto%>">
+                    <input type="file" id="foto" name="foto" step="0.1"   value="<%=Companhia.foto%>">
                 </div>
     
                 <button type="submit">Salvar Alterações</button>

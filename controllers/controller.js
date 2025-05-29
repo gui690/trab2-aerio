@@ -45,13 +45,24 @@ export async function abreedtcompanhia(req, res) {
 }
 export async function edtcompanhia(req, res) {
       
+  var salvafoto;
+  if(req.file==fotoupload)
+  {  
+    salvafoto = fotoupload
+  }
+  else{
+    salvafoto=null
+  }
+/*------------------------------- */
   var fotoupload;
   if(req.file!=null)
   {
     fotoupload = req.file.filename
   }
-  else{
-    fotoupload=null
+ 
+  else {
+  
+    fotoupload=salvafoto
   }
  
   await Companhia.findByIdAndUpdate(req.params.id, 
@@ -78,31 +89,43 @@ export async function abreaddcotacao(req, res) {
   res.render("admin/cotacao/add",{Aeroporto:resultado, Usuarios:resultado2, });
 }
 export async function addcotacao(req, res) {
-  var cusuario = null;
-  //se vier aeroporto,busca
-  if(req.body.nome!=null)
-  {
-    cusuario=await Usuario.findById(req.body.nome)
-  }
+  
+   var cliente = null;
+
+   if(req.body.cliente!=null)
+    {
+    cliente=await Cotacao.findById(req.body.cliente)
+    }
+
+    var telefone = null;
+
+    if(req.body.contato!=null)
+     {
+     telefone=await Cotacao.findById(req.body.contato)
+     }
+
       var caeroportoo = null;
       //se vier aeroporto,busca
       if(req.body.origem!=null)
       {
         caeroportoo=await Aeroporto.findById(req.body.origem)
       }
+
+
       var caeroportod = null;
       //se vier aeroporto,busca
       if(req.body.des!=null)
       {
         caeroportod=await Aeroporto.findById(req.body.des)
       }
+    
   await Cotacao.create({
     origem: caeroportoo,
     des: caeroportod,
     dataIda: req.body.dataIda,
     dataVolta: req.body.dataVolta,
-    nome: cusuario,
-    contato: req.body.contato,
+    cliente: cliente,
+    contato:telefone,
     status: req.body.status,
   });
   res.redirect("/admin/cotacao/add");
@@ -120,8 +143,12 @@ export async function abreedtcotacao(req, res) {
   const resultado = await Cotacao.findById(req.params.id)
   const caeroportoo = await Aeroporto.find({}).catch(function(err){console.log(err)});
   const caeroportod = await Aeroporto.find({}).catch(function(err){console.log(err)});
-  const cusuario = await Usuario.find({}).catch(function(err){console.log(err)});
-  res.render("admin/cotacao/edt", {Cotacao: resultado, Aeroporto:caeroportoo,Aeroporto:caeroportod, Usuario:cusuario});
+  const cliente = await Usuario.find({}).catch(function(err){console.log(err)});
+  const telefone = await Usuario.find({}).catch(function(err){console.log(err)});
+ 
+  res.render("admin/cotacao/edt", {Cotacao: resultado, Aeroporto:caeroportoo,
+    Aeroporto:caeroportod, Usuario:cliente, Usuario:telefone
+  });
 }
 export async function edtcotacao(req, res) {
   await Cotacao.findByIdAndUpdate(req.params.id, req.body)
@@ -177,6 +204,15 @@ export async function abreedtaeroporto(req, res) {
   res.render("admin/aeroporto/edt", {Aeroporto:resultado});
 }
 export async function edtaeroporto(req, res) {
+  var salvafoto;
+  if(req.file==fotoupload)
+  {  
+    salvafoto = fotoupload
+  }
+  else{
+    salvafoto=null
+  }
+/*------------------------------- */
 
   var fotoupload;
   if(req.file!=null)
@@ -184,7 +220,7 @@ export async function edtaeroporto(req, res) {
     fotoupload = req.file.filename
   }
   else{
-    fotoupload=null
+    fotoupload=salvafoto
   }
   await Aeroporto.findByIdAndUpdate(req.params.id,
     

@@ -87,6 +87,7 @@ h1 {
     background: linear-gradient(135deg, #1e3c72, #2a5298); /* Degradê azul moderno */
     padding: 0.75rem 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 10cm;
 }
 
 .custom-navbar .navbar-brand {
@@ -115,466 +116,356 @@ h1 {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,0.8%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-/*USUARIO*/
+/*LST*/
 
-/*ADD*/
 
-/* Estilo do container do formulário */
-.form-container {
-    max-width: 600px;
-    margin: 3rem auto;
-    padding: 2.5rem;
-    background-color: rgba(255, 255, 255, 0.95);
+  /* Reset e base */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f9fc;
+    color: #333;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
     border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
+    box-shadow: 0 4px 12px rgba(219, 213, 213, 0.08);
+  }
 
-/* Título do formulário */
-.form-container h1 {
+  h1 {
     text-align: center;
-    margin-bottom: 2rem;
-    color: #0077b6;
-    font-size: 2rem;
-}
+    color: #004a87;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 28px;
+  }
 
-/* Grupos de formulário */
-.form-group {
-    margin-bottom: 1.5rem;
-}
+  /* Formulários */
+  form.form-inline {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
 
-/* Labels */
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #023e8a;
-}
-
-/* Inputs */
-.form-group input {
-    width: 100%;
-    padding: 0.75rem 1rem;
+  form input[type="text"] {
+    padding: 10px;
+    width: 300px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
+    border-radius: 6px;
+    font-size: 16px;
+  }
 
-.form-group input:focus {
-    border-color: #00b4d8;
-    outline: none;
-}
-
-/* Botões */
-button[type="submit"] {
-    background-color: #0096c7;
+  form button {
+    background-color: #0077cc;
     color: white;
-    padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 16px;
     cursor: pointer;
-    margin-right: 1rem;
     transition: background-color 0.3s ease;
-}
+  }
 
-button[type="submit"]:hover {
-    background-color: #00b4d8;
-}
+  form button:hover {
+    background-color: #005fa3;
+  }
 
-/* Botão cancelar */
-button.cancelar {
-    background-color: #adb5bd;
-}
-
-button.cancelar:hover {
-    background-color: #868e96;
-}
-
-
-/*EDT*/
-
-/* Container geral dos formulários */
-.container, .form-container {
-    max-width: 600px;
-    margin: 3rem auto;
-    padding: 2.5rem;
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-}
-
-/* Título centralizado */
-.container h1, .form-container h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #0077b6;
-    font-size: 2rem;
-}
-
-/* Estilo dos campos */
-.form-group {
-    margin-bottom: 1.5rem;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 0.5rem;
-    font-weight: 600;
-    color: #023e8a;
-}
-
-.form-group input {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.form-group input:focus {
-    border-color: #00b4d8;
-    outline: none;
-}
-
-/* Botões */
-button[type="submit"],
-button[type="button"] {
-    background-color: #0096c7;
+  /* Botão Adicionar */
+  .add-btn {
+    background-color: #00a859;
     color: white;
-    padding: 0.75rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    cursor: pointer;
-    margin-right: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-button[type="submit"]:hover,
-button[type="button"]:hover {
-    background-color: #00b4d8;
-}
-
-/* Botão cancelar */
-button.cancelar {
-    background-color: #adb5bd;
-}
-
-button.cancelar:hover {
-    background-color: #868e96;
-}
-
-
-/*lst*/
-
-/* Container da listagem */
-.container {
-    max-width: 90%;
-    margin: 3rem auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.05);
-}
-
-/* Título */
-.container h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #0077b6;
-}
-
-/* Botão de adicionar */
-.add-usuario {
-    text-align: right;
-    margin-bottom: 1rem;
-}
-
-.add-btn {
-    background-color: #0077b6;
-    color: white;
-    padding: 0.5rem 1.2rem;
-    border-radius: 8px;
+    padding: 10px 16px;
     text-decoration: none;
+    border-radius: 6px;
     font-weight: bold;
+    display: inline-block;
+    margin-bottom: 20px;
     transition: background-color 0.3s ease;
+  }
+
+  .add-btn:hover {
+    background-color: #008f4a;
+  }
+
+  /* Tabela */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  thead {
+    background-color: #0077cc;
+    color: white;
+  }
+
+  th, td {
+    padding: 14px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+  }
+
+  tr:hover {
+    background-color: #f1f9ff;
+  }
+
+  /* Imagens menores */
+  .Imenor {
+    height: 50px;
+    border-radius: 4px;
+    object-fit: contain;
+  }
+
+  /* Links */
+  a {
+    text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  /* Botões de ação */
+  .action-buttons a {
+    margin-right: 12px;
+  }
+
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .container {
+      padding: 20px;
+    }
+
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+
+    thead {
+      display: none;
+    }
+
+    tr {
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+
+    td {
+      padding: 10px;
+      text-align: right;
+      position: relative;
+    }
+
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+
+/*EDT e ADD*/
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.add-btn:hover {
-    background-color: #00b4d8;
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f8fb;
+    color: #333;
+    padding: 20px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Títulos */
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #003366;
+}
+
+/* Botões principais */
+.add-btn,
+button[type="submit"],
+.bnt {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.2s ease-in-out;
+}
+
+.add-btn:hover,
+button[type="submit"]:hover,
+.bnt:hover {
+    background-color: #0056b3;
+}
+
+/* Botão cancelar */
+.bnt.cancelar {
+    background-color: #dc3545;
+    margin-left: 10px;
+}
+
+.bnt.cancelar:hover {
+    background-color: #a71d2a;
 }
 
 /* Tabela */
 table {
     width: 100%;
     border-collapse: collapse;
-    font-size: 1rem;
+    margin-top: 20px;
 }
 
-thead {
-    background-color: #0096c7;
+table thead {
+    background-color: #003366;
     color: white;
 }
 
-th, td {
-    padding: 1rem;
+table th,
+table td {
+    padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #dee2e6;
+    border-bottom: 1px solid #ddd;
 }
 
-tr:hover {
-    background-color: #f1f9ff;
+table td img.Imenor {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
 }
 
-/* Botões de ação */
-.action-buttons {
-    display: flex;
-    gap: 0.5rem;
+/* Formulário */
+form {
+    margin-top: 10px;
 }
 
-.edit-btn,
-td a[href*="del"] {
-    padding: 0.4rem 0.8rem;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 0.9rem;
-    color: white;
-    transition: background-color 0.3s ease;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.edit-btn {
-    background-color: #00b4d8;
-}
-
-.edit-btn:hover {
-    background-color: #0096c7;
-}
-
-td a[href*="del"] {
-    background-color: #e63946;
-}
-
-td a[href*="del"]:hover {
-    background-color: #c1121f;
-}
-
-
-/*COOTAÇÃO*/
-
-/*ADD*/
-
-.container {
-    max-width: 800px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: #0077b6;
-}
-
-form .form-group {
-    margin-bottom: 1.2rem;
-}
-
-label {
+.form-group label {
     display: block;
-    font-weight: bold;
-    margin-bottom: 0.5rem;
-    color: #023e8a;
+    margin-bottom: 6px;
+    font-weight: 500;
 }
 
-input[type="text"],
-select {
+.form-group input,
+.form-group select {
     width: 100%;
-    padding: 0.6rem;
+    padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 8px;
-    font-size: 1rem;
-    box-sizing: border-box;
+    border-radius: 6px;
+    background-color: #f9f9f9;
 }
 
-button[type="submit"],
-button.cancelar {
-    margin-top: 1.5rem;
-    padding: 0.6rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-button[type="submit"] {
-    background-color: #0077b6;
-    color: white;
-    margin-right: 0.5rem;
-}
-
-button[type="submit"]:hover {
-    background-color: #0096c7;
-}
-
-button.cancelar {
-    background-color: #e63946;
-    color: white;
-}
-
-button.cancelar:hover {
-    background-color: #c1121f;
-}
-
-
-/*EDT*/
-.bnt.salvar {
-    background-color: #0077b6;
-    color: white;
-    padding: 0.6rem 1.5rem;
-    border: none;
-    border-radius: 8px;
-  }
-  
-  .bnt.salvar:hover {
-    background-color: #0096c7;
-  }
-  
-/*LST*/
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-}
-
-th, td {
-    padding: 0.8rem;
-    text-align: left;
-    border-bottom: 1px solid #ccc;
-}
-
-.add-btn {
-    background-color: #2a9d8f;
-    color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-
-.edit-btn {
-    background-color: #0077b6;
-}
-
-.delete-btn {
-    background-color: #e63946;
-}
-
-.edit-btn:hover, .delete-btn:hover, .add-btn:hover {
-    opacity: 0.8;
-}
-td a.edit-btn,
-td a.delete-btn {
-    display: inline-block;
+/* Ações (editar/deletar) */
+.action-buttons a {
+    margin-right: 10px;
     padding: 6px 12px;
     border-radius: 4px;
     color: white;
     text-decoration: none;
-    text-align: center;
+    font-size: 0.9rem;
+}
+
+.action-buttons .edit-btn {
+    background-color: #28a745;
+}
+
+.action-buttons .edit-btn:hover {
+    background-color: #1c7c31;
+}
+
+.action-buttons .delete-btn {
+    background-color: #dc3545;
+}
+
+.action-buttons .delete-btn:hover {
+    background-color: #a71d2a;
+}
+
+/* Pesquisa */
+.form-inline {
     display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
-}
-
-.edit-btn {
-    background-color: #0077b6;
-}
-
-.delete-btn {
-    background-color: #e63946;
-    margin-left: 5px;
-}
-
-
-
-/*COMPANHIA*/
-
-/*ADD*/
-.form-container {
-    width: 500px;
-    margin: 40px auto;
-    padding: 30px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-  
-  .form-container h1 {
-    text-align: center;
+    flex-wrap: wrap;
     margin-bottom: 20px;
-    color: #008cba;
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: bold;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 10px;
-    border-radius: 6px;
-    border: 1px solid #ccc;
-  }
-  
-  .form-buttons {
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-  }
-  
-  .btn {
+}
+
+.form-inline input[type="text"] {
     flex: 1;
-    padding: 10px 15px;
-    border: none;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .btn.confirm {
-    background-color: #008cba;
-    color: white;
-  }
-  
-  .btn.cancel {
-    background-color: #f44336;
-    color: white;
-  }
-.Imenor{
-    width: 25%;
-    height: 25%;
 }
-/*EDT*/
 
-/*LST*/
+/* Responsivo */
+@media (max-width: 768px) {
+    table thead {
+        display: none;
+    }
 
-/*AEROPORTO*/
+    table,
+    table tbody,
+    table tr,
+    table td {
+        display: block;
+        width: 100%;
+    }
 
-/*ADD*/
+    table tr {
+        margin-bottom: 15px;
+        border-bottom: 2px solid #eee;
+    }
 
-/*EDT*/
+    table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
 
-/*LST*/
+    table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        font-weight: bold;
+        text-align: left;
+    }
+
+    .form-inline {
+        flex-direction: column;
+    }
+}

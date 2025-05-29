@@ -32,11 +32,10 @@
                         <td>
                             <img src="/arquivos/<%=aeroporto.foto%>" class="Imenor"/>
                         </td>
-                        <td>
-                            <a href="/admin/aeroporto/edt/<%=aeroporto.id%> " class="edit-btn">Editar</a>
-                        </td>
-                        <td>
-                            <a href="/admin/aeroporto/del/<%=aeroporto._id%>">Deletar</a>
+                        <td class="action-buttons">
+                            <a href="/admin/aeroporto/edt/<%= aeroporto.id %>" class="edit-btn"><i class="fas fa-edit"></i> Editar</a>
+                            <a href="/admin/aeroporto/del/<%= aeroporto._id %>" class="delete-btn" onclick="return confirm('Tem certeza que deseja deletar este dado?')">Deletar</a>
+                            
                             </td>
                     </tr>
                     <%})%>

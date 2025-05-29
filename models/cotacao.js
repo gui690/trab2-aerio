@@ -18,13 +18,13 @@ const Cotacao = conexao.Schema({
         type:Date,
         required:true
     } ,
-    nome:{
-        type:String,
-        required:true
+    cliente:{
+        type: conexao.Schema.Types.ObjectId,
+        ref: 'Usuario'
     } ,
     contato:{
-        type:String,
-        required:true
+       type: conexao.Schema.Types.ObjectId,
+        ref: 'Usuario'
     } ,
     status:{
         type:String,

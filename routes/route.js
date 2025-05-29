@@ -76,7 +76,7 @@ router.post('/admin/aeroporto/lst', filtraraeroporto);
 router.get('/admin/aeroporto/del/:id', deletaaeroporto);
 //rota do modelo aeroporto (editar)
 router.get('/admin/aeroporto/edt/:id', abreedtaeroporto);
-router.post('/admin/aeroporto/edt/:id', edtaeroporto);
+router.post('/admin/aeroporto/edt/:id', upload.single('foto'),edtaeroporto);
 
 
 //usuario
@@ -90,6 +90,7 @@ router.post('/admin/usuario/lst', filtrarusuario);
 //rota do modelo usuario (delete)
 router.get('/admin/usuario/del/:id', deletausuario);
 //rota do modelo usuario (editar)
+
 router.get('/admin/usuario/edt/:id', abreedtusuario);
 router.post('/admin/usuario/edt/:id', upload.single('foto'),edtusuario);
 

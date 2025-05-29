@@ -10,13 +10,23 @@
                     
                 </div>
                 <div class="form-group">
-                    <label for="origem">Origem  </label>
-                    <input type="text" id="origem" name="origem"  value="<%=Cotacao.origem%>" required>
+                    <label for="origem">Origem</label>
+                <select id="origem" name="origem" required>
+                    <option value="" disabled selected hidden>Selecione sua Origem</option>
+                    <% Aeroporto.forEach(function(aeroporto) { %>
+                        <option value="<%= aeroporto.id %>"><%= aeroporto.nome %></option>
+                    <% }); %>
+                </select>
                 </div>
     
                 <div class="form-group">
                     <label for="des">Destino</label>
-                    <input type="text" id="des" name="des" step="0.01"  value="<%=Cotacao.des%>" required>
+                <select id="des" name="des" required>
+                    <option value="" disabled selected hidden>Selecione sua Destino</option>
+                    <% Aeroporto.forEach(function(aeroporto) { %>
+                        <option value="<%= aeroporto.id %>"><%= aeroporto.nome %></option>
+                    <% }); %>
+                </select>
                 </div>
                 
                 
@@ -35,8 +45,8 @@
             </div>
           
                 <div class="form-group">
-                    <label for="nome">Nome  </label>
-                    <input type="text" id="nome" name="nome" value="<%=Cotacao.nome%>" required>
+                    <label for="cliente">Nome  </label>
+                    <input type="text" id="cliente" name="cliente" value="<%=Cotacao.cliente%>" required>
                 </div>
     
                 <div class="form-group">

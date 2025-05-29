@@ -33,9 +33,9 @@
                         
 
                         <td class="action-buttons">
-                            <a href="/admin/usuario/edt/<%=usuario.id%> " class="edit-btn">Editar</a>
-                       
-                            <a href="/admin/usuario/del/<%=usuario._id%>">Deletar</a>
+                            <a href="/admin/usuario/edt/<%= usuario.id %>" class="edit-btn"><i class="fas fa-edit"></i> Editar</a>
+                            <a href="/admin/usuario/del/<%= usuario._id %>" class="delete-btn" onclick="return confirm('Tem certeza que deseja deletar este usuario?')">Deletar</a>
+                            
                             </td>
                     </tr>
                     <%})%>

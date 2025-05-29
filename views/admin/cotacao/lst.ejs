@@ -20,7 +20,7 @@
                     <tr>
                         <th>Origem</th>
                         <th>Destino</th>
-                        <th>Nome</th>
+                        <th>Cliente</th>
                         <th>Contato</th>
                         <th>Status</th>
                         <th colspan="2">Ações</th> <!-- Adiciona espaço para Editar e Deletar -->
@@ -32,15 +32,15 @@
                     <tr>
                         <td><%=cotacao.origem!=null?cotacao.origem.nome:""%></td>
                         <td><%=cotacao.des!=null?cotacao.des.nome:""%></td>
-                        <td><%=cotacao.nome%></td>
-                        <td><%=cotacao.contato%></td>
+                        <td><%=cotacao.cliente!=null?cotacao.usuario.nome + " /" + cotacao.usuario.telefone:""%></td>                       
                         <td><%=cotacao.status%></td>
 
-                        <td class="action-buttons">
+                    <div>                       <td class="action-buttons">
                             <a href="/admin/cotacao/edt/<%= cotacao.id %>" class="edit-btn"><i class="fas fa-edit"></i> Editar</a>
                             <a href="/admin/cotacao/del/<%= cotacao._id %>" class="delete-btn" onclick="return confirm('Tem certeza que deseja deletar esta cotação?')">Deletar</a>
                             
-                            </td>
+                            </td></div>
+ 
                     </tr>
                     <%})%>
                  
